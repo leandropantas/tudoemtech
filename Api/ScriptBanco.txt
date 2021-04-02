@@ -1,0 +1,5 @@
+
+CREATE TABLE Clients (id varchar(50) NOT NULL,name varchar(50) NOT NULL, email varchar(100) NOT NULL UNIQUE , CONSTRAINT `PK_Clients` PRIMARY KEY (id));
+CREATE TABLE Products (id varchar(100) NOT NULL, name varchar(50) NOT NULL, value double NOT NULL, CONSTRAINT `PK_Products` PRIMARY KEY (id));
+CREATE TABLE Orders (orderId varchar(50) NOT NULL,clientId varchar(50) NOT NULL, productId varchar(100) NOT NULL, orderDate date NOT NULL, quantity int NOT NULL, PRIMARY KEY (orderId,clientId, productId));
+
